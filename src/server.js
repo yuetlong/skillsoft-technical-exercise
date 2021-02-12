@@ -55,13 +55,13 @@ const deserializeAll = (resourceName) => {
 let people = [];
 let planets = [];
 
-// (async () => {
-//     people = await fetchAll("people", true);
-//     planets = await fetchAll("planets", true);
-// })();
+(async () => {
+    people = await fetchAll("people", false);
+    planets = await fetchAll("planets", false);
+})();
 
-people = deserializeAll("people");
-planets = deserializeAll("planets");
+// people = deserializeAll("people");
+// planets = deserializeAll("planets");
 
 
 

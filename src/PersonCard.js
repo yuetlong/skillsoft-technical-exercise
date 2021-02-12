@@ -16,9 +16,6 @@ const useStyles = makeStyles({
     title: {
         fontSize: 14,
     },
-    pos: {
-        marginBottom: 12,
-    },
 });
 
 export default function PersonCard(props) {
@@ -27,20 +24,20 @@ export default function PersonCard(props) {
     return (
         <Card className={classes.root}>
             <CardContent>
-                <Typography className={classes.title}  color="textPrimary">
-                    {name}
+                <Typography>
+                    Name: {name}
                 </Typography>
-                <Typography variant="h5" component="h2">
-                    {homeworld?.name}
+                <Typography>
+                    Origin: {homeworld == null ? "Unknown" : homeworld?.name}
                 </Typography>
-                <Typography className={classes.pos} color="textSecondary">
-                    {height}
+                <Typography>
+                    Height: {height}
                 </Typography>
-                <Typography variant="body2" component="p">
-                    {mass}
+                <Typography>
+                    Mass: {mass}
                 </Typography>
-                <Typography variant="body2" component="p">
-                    {birth_year}
+                <Typography>
+                    Birth year: {birth_year}
                 </Typography>
             </CardContent>
         </Card>
